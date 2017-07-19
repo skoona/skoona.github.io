@@ -1,0 +1,6 @@
+vendor
+_site
+.idea
+*.iml
+Gemfile.lock
+
