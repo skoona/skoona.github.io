@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/skoona
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://skoona.github.io
+  * I am skoona (https://keybase.io/skoona) on keybase.
+  * I have a public key ASB3umzbpW-tNRRm1jzGxndeD9xG1uoL8obSsBLXaz7Ifwo
+
+To do so, I am signing this object:
+
+{
+    &quot;body&quot;: {
+        &quot;key&quot;: {
+            &quot;eldest_kid&quot;: &quot;012077ba6cdba56fad351466d63cc6c6775e0fdc46d6ea0bf286d2b012d76b3ec87f0a&quot;,
+            &quot;host&quot;: &quot;keybase.io&quot;,
+            &quot;kid&quot;: &quot;012077ba6cdba56fad351466d63cc6c6775e0fdc46d6ea0bf286d2b012d76b3ec87f0a&quot;,
+            &quot;uid&quot;: &quot;8b8e2180e36831660a26d5241fc3fb19&quot;,
+            &quot;username&quot;: &quot;skoona&quot;
+        },
+        &quot;merkle_root&quot;: {
+            &quot;ctime&quot;: 1500472908,
+            &quot;hash&quot;: &quot;5746230f9b79ce38c3857b57c7715ac8257f30fcb28232db703847c040d7d2014e13b355638a7164477459542d09ef4f104eed806ad2658adde54752d17763fc&quot;,
+            &quot;hash_meta&quot;: &quot;79924fa5587d736a8983937f0a472a20fa6f083437a3aeddace55b36422d1065&quot;,
+            &quot;seqno&quot;: 1262374
+        },
+        &quot;service&quot;: {
+            &quot;hostname&quot;: &quot;skoona.github.io&quot;,
+            &quot;protocol&quot;: &quot;https:&quot;
+        },
+        &quot;type&quot;: &quot;web_service_binding&quot;,
+        &quot;version&quot;: 1
+    },
+    &quot;client&quot;: {
+        &quot;name&quot;: &quot;keybase.io go client&quot;,
+        &quot;version&quot;: &quot;1.0.25&quot;
+    },
+    &quot;ctime&quot;: 1500472918,
+    &quot;expire_in&quot;: 504576000,
+    &quot;prev&quot;: &quot;00a45f3df872e1bbf946d7147d078190ebb430c38352d5ca348109674faca021&quot;,
+    &quot;seqno&quot;: 12,
+    &quot;tag&quot;: &quot;signature&quot;
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgd7ps26VvrTUUZtY8xsZ3Xg/cRtbqC/KG0rAS12s+yH8Kp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzdiYTZjZGJhNTZmYWQzNTE0NjZkNjNjYzZjNjc3NWUwZmRjNDZkNmVhMGJmMjg2ZDJiMDEyZDc2YjNlYzg3ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzdiYTZjZGJhNTZmYWQzNTE0NjZkNjNjYzZjNjc3NWUwZmRjNDZkNmVhMGJmMjg2ZDJiMDEyZDc2YjNlYzg3ZjBhIiwidWlkIjoiOGI4ZTIxODBlMzY4MzE2NjBhMjZkNTI0MWZjM2ZiMTkiLCJ1c2VybmFtZSI6InNrb29uYSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwMDQ3MjkwOCwiaGFzaCI6IjU3NDYyMzBmOWI3OWNlMzhjMzg1N2I1N2M3NzE1YWM4MjU3ZjMwZmNiMjgyMzJkYjcwMzg0N2MwNDBkN2QyMDE0ZTEzYjM1NTYzOGE3MTY0NDc3NDU5NTQyZDA5ZWY0ZjEwNGVlZDgwNmFkMjY1OGFkZGU1NDc1MmQxNzc2M2ZjIiwiaGFzaF9tZXRhIjoiNzk5MjRmYTU1ODdkNzM2YTg5ODM5MzdmMGE0NzJhMjBmYTZmMDgzNDM3YTNhZWRkYWNlNTViMzY0MjJkMTA2NSIsInNlcW5vIjoxMjYyMzc0fSwic2VydmljZSI6eyJob3N0bmFtZSI6InNrb29uYS5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yNSJ9LCJjdGltZSI6MTUwMDQ3MjkxOCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiIwMGE0NWYzZGY4NzJlMWJiZjk0NmQ3MTQ3ZDA3ODE5MGViYjQzMGMzODM1MmQ1Y2EzNDgxMDk2NzRmYWNhMDIxIiwic2Vxbm8iOjEyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQIC+XpL3cjYl7QUOPkVIocHr1uZt3HILlup1SY6f1jk1XAe3iXLCLKYSYIZswIZ2a0nU8VcaGte+Ns2ie2IaiQ6oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCTisjvGjEXHl2Do1ybHg4W0X9ZiUjJXPqd9yQlKMS9yqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/skoona
+
+==================================================================
