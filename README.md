@@ -18,5 +18,5 @@ Ruby and Ruby on Rails are a part of my day to day development activities.
 I will be posting new articles that go in depth on the above strategy, here!
 
 
-![keybase.io](https://keybase.io/images/icons/icon-keybase-logo-48.png) [James Scott, Jr.](https://keybase.io/skoona)
+![keybase.io](https://keybase.io/images/icons/icon-keybase-logo-24.png) [James Scott, Jr.](https://keybase.io/skoona)
 a.k.a Skoona
