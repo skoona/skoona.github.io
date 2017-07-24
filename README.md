@@ -16,3 +16,6 @@ Ruby and Ruby on Rails are a part of my day to day development activities.
 * [Using UDP for a Raspberry Pi Display and locator service.](https://skoona.blogspot.com/2016/08/raspberry-pi-iot-udp-programming-with.html)
 
 I will be posting new articles that go in depth on the above strategy, here!
+
+[James Scott, Jr.](https://keybase.io/skoona)
+a.k.a Skoona
