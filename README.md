@@ -18,7 +18,7 @@ Ruby and Ruby on Rails are a part of my day to day development activities.
 I will be posting new articles that go in depth on the above strategy, here!
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
       {{ post.excerpt }}
