@@ -14,5 +14,5 @@ Ruby and Ruby on Rails are a part of my day to day development activities.
 I will be posting new articles that go in depth on the above strategy, here!
 
 ### Repositories
-* All: [Skoona Repositories](https://github.com/skoona/)
+* [All*](https://github.com/skoona/)
 
