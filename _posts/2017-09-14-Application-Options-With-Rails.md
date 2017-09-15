@@ -18,5 +18,5 @@ description: Building Applications using the Rails Web Framework
 
 I will expose more of my archives as I find them!
 
-[back]({{ site.url }})
+[back]({{ site.github.repository_url }})
 
