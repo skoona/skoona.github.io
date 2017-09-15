@@ -1,10 +1,12 @@
 ---
-layout: default
+layout: post
 published: true
+title: [Building Applications using the Rails Web Framework]
+description: Building Applications using the Rails Web Framework
 ---
 ![]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
 
-### Building Advanced Rails Applications.
+### Building Applications using the Rails Web Framework
 
 * [The Rails Way (MVC) ](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
 * [Rails MVC Best Practices.](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)

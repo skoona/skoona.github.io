@@ -4,8 +4,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Authentication, Authorization, Domain Driven Design, JRuby, Java, Integration,
   Raspberry Pi and Internet of Things, Artificial Intelligence, Apache Camel, Middleware,
   Queueing, and Open Source are some of the topics I am personally invested in learning more about.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://skoona.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" 
+url: https://skoona.github.io 
 twitter_username: JamesScottiii
 github_username:  skoona
 # paginate:     1
