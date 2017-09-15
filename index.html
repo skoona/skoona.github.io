@@ -1,0 +1,34 @@
+---
+layout: default
+title: {{ site.title }}
+description: {{ site.description }}
+---
+
+<h1>Welcome to my Blog</h1>
+
+<p>I use this site to share my strategy on developing applications or components related to my current interests.</p>
+
+<p>Ruby and Ruby on Rails are a part of my day to day development activities.</p>
+
+<h2>Notable Shares</h2>
+<ul>
+	<li>Rails V5: <a href="https://skoona.github.io/SknServices/">SknServices</a></li>
+	<li><a href="http://vserv.skoona.net:8080/">SknServices Demo</a></li>
+	<li>Ruby Gem: <a href="https://skoona.github.io/skn_utils/">SknUtils</a></li>
+	<li><a href="https://skoona.github.io/glinegraph-cairo/">Gtk3 BarGraph Widget</a></li>
+	<li><a href="https://skoona.github.io/skn_rpi-display-services/">Gtk3 Rpi Utilities</a></li>
+</ul>
+
+<p>I will be posting new articles that go in depth on the above SknStrategy, here!, as soon a decide on the markup and tooling!</p>
+
+<div id="home">
+  <h2>Blog Posts</h2>
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
