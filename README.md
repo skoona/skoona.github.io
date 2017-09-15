@@ -14,12 +14,14 @@ Ruby and Ruby on Rails are a part of my day to day development activities.
 
 I will be posting new articles that go in depth on the above strategy, here!
 
-### Posts
-<ul>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
       {{ post.excerpt }}
     </li>
   {% endfor %}
-</ul>
+  </ul>
+</div>

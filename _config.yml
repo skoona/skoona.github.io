@@ -8,6 +8,10 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://skoona.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: JamesScottiii
 github_username:  skoona
+# paginate:     1
+author:
+  name:       James Scott, Jr. (a.k.a Skoona)
+  url:        https://keybase.io/skoona
 
 
 # Build settings
@@ -17,5 +21,8 @@ theme: jekyll-theme-cayman
 excerpt_separator: <!--more-->
 plugins_dir:
   - jekyll-feed
+#  - jekyll-paginate
 
 github: [metadata]
+
+

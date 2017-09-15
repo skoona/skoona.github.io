@@ -17,5 +17,5 @@ published: true
 
 I will expose more of my archives as I find them!
 
-[back]({{ site.github.repository_url }})
+[back]({{ site.url }})
 
