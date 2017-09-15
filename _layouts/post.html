@@ -1,9 +1,25 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  {% include head.html %}
 
-{{ content }}
+  <body>
+	<section class="page-header">
+	  <h1 class="project-name">{{ site.title | default: page.title }}</h1>
+	  <h2 class="project-tagline">{{ page.description | default: site.description }}</h2>
+	</section>
 
-<a href={{ site.url }}>back</a>
+
+    <section class="main-content">
+	  <p class="meta">{{ page.date | date_to_string }}</p>
+
+      {{ content }}
+
+      <a href={{ site.url }}>back</a>
+
+      {% include page-footer.html %}
+
+    </section>
+
+  </body>
+</html>
