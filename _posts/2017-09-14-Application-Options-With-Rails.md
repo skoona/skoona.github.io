@@ -16,7 +16,7 @@ description: Building Applications using the Rails Web Framework
 * [Domain Driven Design for Rails.](https://blog.arkency.com/domain-driven-rails/)
 * [Event Storming.](https://blog.redelastic.com/corporate-arts-crafts-modelling-reactive-systems-with-event-storming-73c6236f5dd7)
 
-I will expose more of my archives as I find them!
+
 
 
 
