@@ -2,7 +2,7 @@
 layout: default
 published: true
 ---
-![](https://skoona.github.io/skoona/images/SFStrategyModelBasic.png)
+![](https://skoona.github.io/images/SFStrategyModelBasic.png)
 
 ### Building Advanced Rails Applications.
 
