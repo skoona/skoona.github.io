@@ -2,7 +2,7 @@
 layout: default
 published: true
 ---
-![](./images/SFStrategyModelBasic.png)
+![]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
 
 ### Building Advanced Rails Applications.
 
@@ -17,5 +17,5 @@ published: true
 
 I will expose more of my archives as I find them!
 
-[back](./)
+[back]({{ site.github.repository_url }})
 
