@@ -4,7 +4,7 @@ published: true
 title: [Building Applications using the Rails Web Framework]
 description: Building Applications using the Rails Web Framework
 ---
-![]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
+![ServiceRegistry]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
 
 
 * [The Rails Way (MVC) ](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
