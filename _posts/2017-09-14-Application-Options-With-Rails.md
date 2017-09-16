@@ -7,28 +7,27 @@ comments: true
 ---
 ## Under Construction
 
-![ServiceRegistry]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
+![SknStrategy]({{ site.github.repository_url }}/images/SknServices-Strategy.png)
 
 Introducing SknServices
 This GitHub hosted Rails 5 project, https://github.com/skoona/SknServices, is a small example of core authentication and authorization security processes; and a real example of an alternative development strategy for Rails web applications.
 
 Rails promotes a MVC-based development approach, i.e., The Rails Way.  The MVC pattern is a classic and used with success, as is, for many applications.  However, there are growth issues when the code set exceeds a certain size or feature mix.  Big ball of mud, is the current phrase that describes this outcome.  We understand these growth issues and have chosen to apply a more traditional design bias to implementing applications using Rails.  The bias here means to align with DDD and OO principals loosely, but we do what is needed to get the job done.
 
+> ReThink: How would you structure your application differently if you choose not to embrace MVC?
+
 The SknStrategy involves treating all of Rails as a web library for our application.  Ordinarily, you would not write your application by embedding it inside a library of any kind, so a rethink of the Rails Way is required.
 
-SknStrategy Impact:
+### SknStrategy Impact:
 
-All ActiveRecord or Active??? API calls are consolidated in a Provider class.
-
-Business logic is contained in one or more Domain classes.
-
-All Controller specific APIs are in Helpers.
-
-Controllers and Views overall responsibility is greatly reduced.
-
-ReThink: How would you structure your application differently if you choose not to embrace MVC?
+* All ActiveRecord or Active??? API calls are consolidated in a Provider class.
+* Business logic is contained in one or more Domain classes.
+* All Controller specific APIs are in Helpers.
+* Controllers and Views overall responsibility is greatly reduced.
 
 SknStrategy metaphorically takes one step back from the Rails MVC Way.  Rather than add code to controllers, views, and data model we implement a classic OO application structure; right now we refer to it as the SknStrategy.
+
+![ServiceRegistry]({{ site.github.repository_url }}/images/SFStrategyModelBasic.png)
 
 To make the connection back to Rails:
 
@@ -42,13 +41,10 @@ To enable the controller to find our services a #service_factory method, or serv
 
 The service method invoked from the controllers entry-method is defined in a ProcessService class.  The rethink allows us to gather Domain or Topic level feature methods into one class.  Grouping them by business process should be natural.  AccountService, PolicyService, QuoteService, and ContentService might be names that your application would create as ProcessService class names.
 
-Service methods:
-
-Parse the incoming params, collect and package the resulting data into a ResultsBean for the controller/view.
-
-Always return a proper answer to the controller, which requires it catch any exception thrown by lower level routines.
-
-Call one domain level method, through inheritance, to generate the response data.
+### Service methods:
+* Parse the incoming params, collect and package the resulting data into a ResultsBean for the controller/view.
+* Always return a proper answer to the controller, which requires it catch any exception thrown by lower level routines.
+* Call one domain level method, through inheritance, to generate the response data.
 
 As indicated a ProcessServices class inherits from a ProcessDomain class.  Domain classes have a collection of methods that do the work to produce a valid and pre-authorized response for this application's entry-point.  These methods or commands are likely topical and related to a single business process.  If ActiveRecord/ActiveModel work is required for this process step the domain method will call the appropriate data provider through the service factory to retrieve the business objects needed.  Providers return only business objects; never an ActiveRecord record instance, just attribute bundles.  If part of the process step work requires specialized processing, a TaskAdapter or TaskProccessor class may be invoked to complete the work needed for this request.  Use of standalone PORO single responsibility classes is also valid.  All processed results are returned to the service methods and packaged for the view.
 
@@ -61,10 +57,9 @@ I'll update this post with more details.  For now, let me know your thoughts in 
 
 James,
 
-
+### Related Items
 * [The Rails Way (MVC) ](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
 * [Rails MVC Best Practices.](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
-* [SknStrategy.](https://skoona.blogspot.com/2016/08/sknservices-alternate-development_11.html)
 * [Clean Architecture.](https://medium.com/magnetis-backstage/clean-architecture-on-rails-e5e82e8cd326)
 * [Hexagonal Architecture.](https://medium.com/@vsavkin/hexagonal-architecture-for-rails-developers-8b1fee64a613)
 * [Domain Driven Design for Rails.](https://blog.arkency.com/domain-driven-rails/)
