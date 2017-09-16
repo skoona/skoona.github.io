@@ -1,13 +1,15 @@
 ---
 layout: page
 title: About
-tagline: A few more words about this theme
+tagline: Current Interests
 permalink: /about.html
 ---
 
-This is the _Cayman Blog_ Jekyll theme. You can find out more info about customizing this theme, as well as basic usage documentation, and source code at: [cayman-blog](https://github.com/lorepirri/cayman-blog)
+## Under Construction
 
-You can find the source code for _Jekyll_ at [jekyll](https://github.com/jekyll/jekyll)
-
+Avid software developer on all platforms, recent favorites include the
+Raspberry PI, Parallella, Linux, and OS-X.   Most interested in systems programming,
+integration, software engineering methodologies and system architectures.  Currently involved writing
+Ruby Web applications using Ruby on Rails and JRuby.
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
