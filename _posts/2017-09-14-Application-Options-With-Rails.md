@@ -1,8 +1,9 @@
 ---
 layout: post
 published: true
-title: [Building Applications using the Rails Web Framework]
-tagline: Building Applications using the Rails Web Framework
+title: [Building Applications using the Ruby Rails Web Framework]
+tagline: Building Applications using the Ruby on Rails Web Framework
+comments: true
 ---
 ## Under Construction
 
