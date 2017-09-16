@@ -18,6 +18,8 @@ author:
 
 markdown: kramdown
 theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman-blog
+
 excerpt_separator: <!--more-->
 plugins_dir:
   - jekyll-feed

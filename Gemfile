@@ -15,6 +15,7 @@ require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 gem 'jekyll-theme-cayman'
+# gem "jekyll-theme-cayman-blog"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
