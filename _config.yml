@@ -23,10 +23,6 @@ author:
 
 
 # Build settings
-header_pages:
-  - about.md
-  - contact.md
-
 markdown: kramdown
 theme:
 # theme: jekyll-theme-cayman-blog
