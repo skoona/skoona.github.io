@@ -8,7 +8,7 @@ categories: Ruby Rails SknStrategy
 ---
 
 # Under Construction
-Explaining this topic out properly will take several articles.  THe best source today is the code repository and 'Architecture' link in the footer of the code or online demo.
+Explaining this topic properly will take several articles.  The best source today is the code repository and 'Architecture' link in the footer of the code or online demo.
 
 
 # Introducing SknServices
