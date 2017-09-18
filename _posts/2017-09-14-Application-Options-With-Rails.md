@@ -8,7 +8,7 @@ categories: Ruby Rails SknStrategy
 ---
 
 # Under Construction
-Explaining this topic properly will take several articles.  The best source today is the code repository and 'Architecture' link in the footer of the code or online demo.
+Explaining this topic properly will take several articles.  The best source today is the [code repository](https://github.com/skoona/SknServices) and the [Architecture](http://vserv.skoona.net:8080/pages/details_architecture) link in the footer of the code or online demo.
 
 
 # Introducing SknServices
