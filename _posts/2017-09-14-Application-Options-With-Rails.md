@@ -1,14 +1,20 @@
 ---
 layout: post
 published: true
-title: [Building Applications using the Ruby Rails Web Framework]
+title: [Building Applications using the Ruby on Rails Web Framework]
 tagline: SknStrategy an implementation alternative to the Rails Way
 comments: true
+categories: Ruby Rails SknStrategy
 ---
+
+# Under Construction
+Explaining this topic out properly will take several articles.  THe best source today is the code repository and 'Architecture' link in the footer of the code or online demo.
+
+
 # Introducing SknServices
 
 This [Rails 5 project](https://github.com/skoona/SknServices) is an example of _Authentication and Authorization_ security
-processes used with Ruby on Rails(ROR) applications; and a comprehensive example of the **SknStrategy** development methodology suitable
+processes used with Ruby on Rails(ROR) applications; and a comprehensive example of the **SknStrategy** development method suitable
 for building ROR web applications.
 
 ![SknStrategy]({{ site.github.repository_url }}/images/SknServices-Strategy.png)
