@@ -6,7 +6,7 @@ tagline: Development Approach Introduction
 comments: true
 ---
 
-I started with Ruby on Rails about the time when version 2.0 was released years ago.  After several release upgrade experiences, I adopted
+I started with Ruby on Rails around the time version 2.0 was released.  After several release upgrade experiences, I adopted
 some different practices to help with future upgrades, increase readability, and to improve code
 coverage metrics; as learning's from my prior experiences.
 
@@ -137,7 +137,9 @@ spec/
         └── service_registry_mock_controller.rb
 ```
 
-ServiceRegistry implementation coming in next article.  Until then your comments are welcome.
+![SknFlow]({{ site.github.repository_url }}/images/SFFlow.png)
+
+ServiceRegistry implementation details coming in next article.  Until then your comments are welcome.
 
 James,
 
