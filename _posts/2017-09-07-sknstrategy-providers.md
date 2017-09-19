@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: [Provider classes]
+title: [SknStrategy - Provider classes]
 tagline: Entity Respository Role Containers for SknStrategy
 comments: true
 ---

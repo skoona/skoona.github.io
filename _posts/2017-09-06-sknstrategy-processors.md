@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: [Processor class]
+title: [SknStrategy - Processor class]
 tagline: Special Task Processor Container for SknStrategy
 comments: true
 ---

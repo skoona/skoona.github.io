@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: [Utility classes]
+title: [SknStrategy - Utility classes]
 tagline: Ruby Key/Value Container for SknStrategy
 comments: true
 ---

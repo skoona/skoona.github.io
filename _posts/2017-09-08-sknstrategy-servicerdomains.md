@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: [ServiceDomain class]
+title: [SknStrategy - ServiceDomain class]
 tagline: Application Logic Container for SknStrategy
 comments: true
 ---

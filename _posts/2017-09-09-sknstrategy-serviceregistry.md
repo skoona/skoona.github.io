@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: [ServiceRegistry facility]
+title: [SknStrategy - ServiceRegistry facility]
 tagline: Core Container for SknStrategy
 comments: true
 ---
