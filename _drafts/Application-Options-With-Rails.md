@@ -166,13 +166,28 @@ I'll update this post with more details.  For now, let me know your thoughts in 
 James,
 
 ### Related Items
+* [5 Rails console tricks](http://www.chrisrolle.com/en/blog/5-rails-console-tricks)
+* [Piperator: Pipeline Proccessing for Ruby](https://github.com/lautis/piperator)
+* [Evented Rails: Decoupling domains in Rails with Wisper pub/sub events](http://www.g9labs.com/2016/06/23/rails-pub-slash-sub-with-wisper-and-sidekiq/)
+* [Bring Clarity to your Monolith - Bounded Contexts](https://blog.carbonfive.com/2016/11/01/bring-clarity-to-your-monolith-with-bounded-contexts/)
 * [The Rails Way (MVC) ](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
 * [Rails MVC Best Practices.](https://www.sitepoint.com/10-ruby-on-rails-best-practices-3/)
 * [Clean Architecture.](https://medium.com/magnetis-backstage/clean-architecture-on-rails-e5e82e8cd326)
 * [Hexagonal Architecture.](https://medium.com/@vsavkin/hexagonal-architecture-for-rails-developers-8b1fee64a613)
-* [Domain Driven Design for Rails.](https://blog.arkency.com/domain-driven-rails/)
-* [Event Storming.](https://blog.redelastic.com/corporate-arts-crafts-modelling-reactive-systems-with-event-storming-73c6236f5dd7)
+* [DDD for Rails Developers](https://www.sitepoint.com/ddd-for-rails-developers-part-3-aggregates/)
+* [Enhanced Ruby on Rails Architecture](https://github.com/CodeRocketCo/enhanced-rails-architecture#enhanced-ruby-on-rails-architecture)
+* [Design Patterns in Ruby](https://bogdanvlviv.github.io/posts/ruby/patterns/design-patterns-in-ruby.html#strategy)
 
+### Videos
+* [Architecture of The Lost Years talk by Uncle Bob](http://confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years)
+* [Hexagonal Rails](http://www.slideshare.net/dwhelan/domain-driven-design-and-hexagonal-srchitecture-with-rails)
+
+### Related Books
+* [Domain Driven Design, by Eric Evans](https://www.amazon.com/Domain-driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=pd_bxgy_b_img_y)
+* [Domain Driven Rails.](https://blog.arkency.com/domain-driven-rails/)
+* [Implementing Domain-Driven Design](https://www.amazon.com/gp/product/0321834577/)
+* [Event Storming.](https://blog.redelastic.com/corporate-arts-crafts-modelling-reactive-systems-with-event-storming-73c6236f5dd7)
+* [Design Patterns in Ruby](https://www.amazon.com/Design-Patterns-Ruby-Addison-Wesley-Professional/dp/0321490452)
 
 End of this post
 

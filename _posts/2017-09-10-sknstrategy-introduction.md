@@ -10,9 +10,9 @@ I started with Ruby on Rails about the time when version 2.0 was released years 
 some different practices to help with future upgrades, increase readability, and to improve code
 coverage metrics; as learning's from my prior experiences.
 
-> What I learned was; The Rails MVC Way is the problem!, not Rails the Web Framework.
+> **_What I learned was; The Rails MVC Way is the problem!, not Rails the Web Framework._**
 
-This article will introduce the components of **_SknStrategy_**, the development approach I
+This post will introduce the components of **_SknStrategy_**, the development approach I
 use to build Ruby on Rails applications.
 
 ![SknStrategy]({{ site.github.repository_url }}/images/SknServices-Strategy.png)
@@ -26,7 +26,7 @@ Since adopting this development strategy, I have upgraded several corporate appl
 version 2.3 to V4.1 with minimal effort.  Mainly because of the separation of application code from
 Rails containers.
 
-> The greatest value was derived from removing all application logic/code from the Rails Controllers.
+> **_The greatest value was derived from removing all application logic/code from the Rails Controllers._**
 
 The business problem is decomposed into related functional grouping or Domains.  Each Domain is responsible
 for delivering value related to its namesake.  QuoteDomain, PolicyDomain, or ClaimsDomain, ProductDomain,
