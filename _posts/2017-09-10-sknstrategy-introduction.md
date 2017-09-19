@@ -30,12 +30,11 @@ Rails containers.
 
 The business problem is decomposed into related functional grouping or Domains.  Each Domain is responsible
 for delivering value related to its namesake.  QuoteDomain, PolicyDomain, or ClaimsDomain, ProductDomain,
-ShippingDomain are semantically the types of Domain classes you should expect to create.
-
-![SknRegistryMethods]({{ site.github.repository_url }}/images/SFRegistryMethods.png)
+ShippingDomain are semantically the types of Domain classes you should expect to create.  However, in the spirit
+of **_Ubiquitous Language_**, you should adopt a naming convention that reflects the language used in the business domain.
 
 The SknStrategy is composed of the following five components, all  namespaced under the 'app/strategy' directory:
-
+![SknRegistryMethods]({{ site.github.repository_url }}/images/SFRegistryMethods.png)
 <dl>
 <dt>ServiceRegistry facility</dt>
 <dd>Responsible for initializing ServiceDomain, Providers, and Processors classes, when invoked by Rails
