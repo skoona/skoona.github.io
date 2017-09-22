@@ -22,11 +22,13 @@ that, all business logic has been extracted from Rails container classes (contro
 inserted into application POROs. Whenever that separation is not practical, we wrapped those Rails APIs in our
 own methods to maintain some separation.
 
+> **_The greatest value was derived from removing all application logic/code from the Rails Controllers._**
+
 Since adopting this development strategy, I have upgraded several corporate applications from Rails
 version 2.3 to V4.1 with minimal effort.  Mainly because of the separation of application code from
 Rails containers.
 
-> **_The greatest value was derived from removing all application logic/code from the Rails Controllers._**
+> **_Next greatest impact comes from isolating all IO calls, think ActiveRecord, WebServices, Outbound-Restful APIs into one class (each) this strategy calls Providers._**
 
 The business problem is decomposed into related functional grouping or Domains.  Each Domain is responsible
 for delivering value related to its namesake.  QuoteDomain, PolicyDomain, or ClaimsDomain, ProductDomain,
