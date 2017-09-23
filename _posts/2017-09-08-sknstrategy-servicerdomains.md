@@ -64,6 +64,7 @@ module ApplicationHelper
 
   ...
 
+  # Services helper
   ### Converts named routes to string
   #  Basic '/some/hardcoded/string/path'
   #        '[:named_route_path]'
@@ -100,6 +101,7 @@ module ApplicationHelper
     '#page_action_error'
   end
 
+  # View helper
   def do_page_actions
     if @page_controls and @page_controls.page_actions?
       PageActionsBuilder.new(@page_controls.hash_from(:page_actions)[:page_actions], self, false).to_s
@@ -114,11 +116,24 @@ end # End module
 
 class ProfilesController < ApplicationController
 
-  def in_action
-    @page_controls = content_service.handle_in_action
-    redirect_to root_path, notice: @page_controls.message and return unless @page_controls.success
-    flash[:notice] = @page_controls.message if @page_controls.message.present?
+  def in_action_admin
+    wrap_html_response content_service.handle_in_action_admin(params.to_unsafe_h)
   end
+
+  def api_accessible_content
+    wrap_json_response content_service.handle_api_accessible_content(params.to_unsafe_h)
+  end
+
+  def member_update
+    wrap_html_and_redirect_response content_service.handle_member_updates(params.to_unsafe_h), members_profiles_url
+  end
+
+  def api_get_demo_content_object
+    @page_controls = content_service.api_get_demo_content_object(params.to_unsafe_h)
+    return render( plain: "File not available!", status: :not_found ) unless @page_controls.success and @page_controls.package.package.source?
+    send_file(@page_controls.package.package.source, filename: @page_controls.package.package.filename, type: @page_controls.package.package.mime, disposition: :inline) and return
+  end
+
     ...
 
   end
@@ -208,7 +223,7 @@ module Domains
   end
 end
 {% endhighlight %}
-
-{% highlight ruby %}
-# app/strategy/domains/domains_base.rb
-{% endhighlight %}
+---
+[back to SknStrategy Introduction]({% link _posts/2017-09-10-sknstrategy-introduction.md %})
+{: style="text-align: center;"}
+---

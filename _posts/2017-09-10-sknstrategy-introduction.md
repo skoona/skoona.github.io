@@ -25,10 +25,10 @@ own methods to maintain some separation.
 > **_The greatest value was derived from removing all application logic/code from the Rails Controllers._**
 
 Since adopting this development strategy, I have upgraded several corporate applications from Rails
-version 2.3 to V4.1 with minimal effort.  Mainly because of the separation of application code from
+version 2.3 upto V4.1 with minimal effort.  Mainly because of the separation of application code from
 Rails containers.
 
-> **_Next greatest impact comes from isolating all IO calls, think ActiveRecord, WebServices, Outbound-Restful APIs into one class (each) this strategy calls Providers._**
+> **_Next greatest impact comes from isolating all IO calls, think ActiveRecord, WebServices, Outbound-Restful APIs into one class (each) this strategy calls Providers and/or Processors._**
 
 The business problem is decomposed into related functional grouping or Domains.  Each Domain is responsible
 for delivering value related to its namesake.  QuoteDomain, PolicyDomain, or ClaimsDomain, ProductDomain,
@@ -38,27 +38,27 @@ of **_Ubiquitous Language_**, you should adopt a naming convention that reflects
 The SknStrategy is composed of the following five components, all  namespaced under the 'app/strategy' directory:
 ![SknRegistryMethods]({{ site.github.repository_url }}/images/SFRegistryMethods.png)
 <dl>
-<dt>ServiceRegistry facility</dt>
-<dd>Responsible for initializing ServiceDomain, Providers, and Processors classes, when invoked by Rails
-controller or peer ServiceDomains.  ServiceFactory is a PORO initially instantiated by the ApplicationController's
+<dt><a href="{% post_url 2017-09-09-sknstrategy-serviceregistry %}">ServiceRegistry facility</a></dt>
+<dd>Responsible for initializing or launching ServiceDomain, Providers, and Processors classes, when invoked by Rails
+controller or peer ServiceDomains.  ServiceRegistry is a PORO initially instantiated by the ApplicationController's
 #method_missing on first use.</dd>
 
-<dt>ServiceDomain classes</dt>
+<dt><a href="{% post_url 2017-09-08-sknstrategy-servicerdomains %}">ServiceDomain classes</a></dt>
 <dd>Responsible for validating request params, processing request, and catching any exception thereby garaunteeing
 a formatted response to the controller; containing only Ruby values.  A Services class which inherits from a Domain
 class is the primary structure; with Services classes taking the request-exception-response role, and the Domain class
 taking the processing role.</dd>
 
-<dt>Provider classes</dt>
+<dt><a href="{% post_url 2017-09-07-sknstrategy-providers %}">Provider classes</a></dt>
 <dd>Responsible for data operations against external sub-systems; like PostgreSQL, Web Services, File Systems, etc.
 Performs IO operations on behalf of ServiceDomain methods and strips data package of subsystem related keys or id.
 Rails ActiveRecord/ActiveModel APIs are in use in this module.  Note: Rails Models are not permitted to include application logic.</dd>
 
-<dt>Processor classes</dt>
+<dt><a href="{% post_url 2017-09-06-sknstrategy-processors %}">Processor classes</a></dt>
 <dd>Responsible for specialized task processing, as may be needed by ServiceDomain methods.  A method here may instantiate
 other PORO classes to complete the complex operations required by a service request.</dd>
 
-<dt>Utility classes</dt>
+<dt><a href="{% post_url 2017-09-05-sknstrategy-utilities %}">Utility classes</a></dt>
 <dd>A small collection of utilities like NestedHash class that provides dot notation to a hash of key/value pairs.
 ServiceDomain methods return their data results inside an instance of this class, as a controller instance variable @page_controls,
 to the related controller.  SknUtuls Gem provides the NestedHash class and SknSettings used for application-level configuration values.</dd>
@@ -142,6 +142,21 @@ spec/
 ![SknFlow]({{ site.github.repository_url }}/images/SFFlow.png)
 
 ServiceRegistry implementation details coming in next article.  Until then your comments are welcome.
+
+
+## Update:  2017-09-22
+After several discussions on the **_ServiceDomain Classes_**, I'm thinking of ways to enhance this position.  Since SDs manage the generation
+of a valid response to a particular controller entry-point into our business logic, I think they can support the role of **_UseCase Interactor_**.  Where
+a UseCase Interactor is responsible for orchestrating the flow of task steps for a classical use case, associated with a business process.
+
+A UseCase would be expected to have multiple entry-points, which fits the original model of ServiceDomain classes.  The subtle difference being a ServiceDomain
+should adhere to the single-responsibility-principal SRP, a UseCase class would not have that expectation.  Additionally, this would be included as a
+framework/strategy container and potentially help clarify the overall methodology.
+
+While many of the tenants of other architectures are present in the SknStrategy, I'm not trying to duplicate them in any way.  I've simple taken from my own
+experiences, strongly influenced the others, and built something that works for me and makes sense for what I'm trying to achieve.
+
+
 
 James,
 

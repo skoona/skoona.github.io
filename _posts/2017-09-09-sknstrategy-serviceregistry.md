@@ -6,8 +6,8 @@ tagline: Core Container for SknStrategy
 comments: true
 ---
 
-Responsible for initializing ServiceDomain, Providers, and Processors classes, when invoked by
-Rails controller or peer ServiceDomains. ServiceFactory is a PORO initially instantiated by the
+Responsible for initializing or launching ServiceDomain, Providers, and Processors classes, when invoked by
+Rails controller or peer ServiceDomains. ServiceRegistry is a PORO initially instantiated by the
 ApplicationController's #method_missing on first use.
 
 
@@ -31,11 +31,27 @@ module Registry
     # New Services extension
     def service_registry
       @service_registry ||= Services::ServiceRegistry.new({registry: self})
-      yield @service_registry if block_given?
-      @service_registry
     end
 
     protected
+
+    # Response wrapper for use in controller
+    def wrap_html_response(service_response, redirect_path=root_path)
+      @page_controls = service_response
+      flash[:notice] = @page_controls.message if @page_controls.message.present?
+      redirect_to redirect_path, notice: @page_controls.message and return unless @page_controls.success
+    end
+
+    def wrap_html_and_redirect_response(service_response, redirect_path=root_path)
+      @page_controls = service_response
+      flash[:notice] = @page_controls.message if @page_controls.message.present?
+      redirect_to redirect_path, notice: @page_controls.message and return
+    end
+
+    def wrap_json_response(service_response)
+      @page_controls = service_response
+      render(json: @page_controls.to_hash, status: (@page_controls.package.success ? :accepted : :not_found), layout: false, content_type: :json) and return
+    end
 
     # Easier to code than delegation, or forwarder
     def method_missing(method, *args, &block)
@@ -64,14 +80,10 @@ module Services
 
     def access_service
       @sf_access_service ||= AccessService.new({registry: self})       # First call will execute this set of code
-      yield @sf_access_service if block_given?
-      @sf_access_service
     end
 
     def content_service
       @sf_content_service ||= ContentService.new({registry: self})
-      yield @sf_content_service if block_given?
-      @sf_content_service
     end
 
     ##
@@ -80,14 +92,10 @@ module Services
 
     def xml_profile_provider
       @sf_xml_profile_builder ||= Providers::XMLProfileProvider.new({registry: self})
-      yield @sf_xml_profile_builder if block_given?
-      @sf_xml_profile_builder
     end
 
     def db_profile_provider
       @sf_db_profile_builder ||= Providers::DBProfileProvider.new({registry: self})
-      yield @sf_db_profile_builder if block_given?
-      @sf_db_profile_builder
     end
 
     ##
@@ -96,19 +104,16 @@ module Services
 
     def content_adapter_file_system
       @sf_content_adapter_file_system ||= Processors::FileSystemProcessor.new({registry: self})
-      yield @sf_content_adapter_file_system if block_given?
-      @sf_content_adapter_file_system
     end
 
     def content_adapter_inline_values
       @sf_content_adapter_inline_values ||= Processors::InlineValuesProcessor.new({registry: self})
-      yield @sf_content_adapter_inline_values if block_given?
-      @sf_content_adapter_inline_values
     end
 
     ##
     # Adapter by Content
     # Will accepts ResultBean, Hash, or single string value
+    # - An experiment of ways to switch duck targets, not really needed
     def adapter_for_content_profile_entry(content)
       content_type = (content.respond_to?(:to_hash) ? (content[:content_type] || content['content_type']) : content)
       case content_type
@@ -120,7 +125,6 @@ module Services
           content_adapter_file_system # default for now
       end
     end
-
 
   end
 end
@@ -281,4 +285,7 @@ module Processors
   end
 end
 {% endhighlight %}
-
+---
+[back to SknStrategy Introduction]({% link _posts/2017-09-10-sknstrategy-introduction.md %})
+{: style="text-align: center;"}
+---

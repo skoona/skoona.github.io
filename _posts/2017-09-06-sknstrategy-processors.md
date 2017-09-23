@@ -64,4 +64,7 @@ module Processors
   end
 end
 {% endhighlight %}
-
+---
+[back to SknStrategy Introduction]({% link _posts/2017-09-10-sknstrategy-introduction.md %})
+{: style="text-align: center;"}
+---
