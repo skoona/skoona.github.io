@@ -3,7 +3,7 @@
 
 I use this site to share my strategy on developing applications or components related to my current interests.
 
-Ruby and Ruby on Rails are a part of my day to day development activities.
+Ruby, JRuby, Ruby on Rails, and Roda are a part of my day to day development activities.
 
 ## Notable Shares
 * Rails V5: [SknServices](https://skoona.github.io/SknServices/)
